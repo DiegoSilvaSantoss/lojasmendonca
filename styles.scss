@@ -1,0 +1,134 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+
+:root {
+    
+    --backgContent: rgb(0, 0, 0);
+    --backgLi: rgb(0, 0, 0);
+    --backgSpan: #cc0000;
+    --backgLiHover: #cc0000;
+
+    --colorContent: rgb(255, 255, 255);
+    --colorTitle: rgb(255, 255, 255);
+    --colorLi: rgb(255, 255, 255);
+
+    --borderContent: solid 1px rgb(255, 255, 255);
+    --borderLi: solid 1px rgb(255, 255, 255);
+    --borderLiHover: solid 1px black;
+
+    --textShadowH1: 5px -1px 0px #000000;
+
+    --boxShadowLiHover: rgb(0, 0, 0) 0px 20px 30px -10px;
+
+    --transformLiHover: translateY(-5px) scale(1.02);
+
+}
+
+
+
+body {
+    font-size: 18px;
+    background-image: url('./src/img/logo_lojas_mendocas.png.jpg');
+    object-fit: cover;
+    background-position: center;
+
+    & main {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 5rem 2rem;
+        backdrop-filter: blur(100px);
+
+        & header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-bottom: 50px;
+
+            & h1 {
+                color: var(--colorTitle);
+                text-transform: uppercase;
+                text-shadow: var(--textShadowH1);
+            }
+
+            & .img-box {
+                
+                & img {
+                    border-radius: 50%;
+                    width: 100px;
+                }
+            }
+
+            & .content {
+                text-align: center;
+                border: var(--borderContent);
+                border-radius: 10px;
+                padding: 1rem 3rem;
+                margin-top: 20px;
+                background-color: var(--backgContent);
+                color: var(--colorContent);
+
+                & span {
+                    padding: 2px;
+                    border-radius: 5px;
+                    background-color: var(--backgSpan);
+                    text-transform: uppercase;
+                }
+
+            }
+        }
+
+
+        & section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+
+            & ul {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                list-style-type: none;
+                padding: 0;
+
+                & li {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 20px;
+                    position: relative;
+                    border: solid 1px;
+                    border-radius: 10px;
+                    padding: 1.2rem 5rem;
+                    cursor: pointer;
+                    background-color: var(--backgLi);
+                    color: var(--colorLi);
+                    border: var(--borderLi);
+                    transition: 0.5s ease;
+
+                    & img {
+                        position: absolute;
+                        left: 5px;
+                        border-radius: 50%;
+                        width: 50px;
+                    }
+
+                    &:hover {
+                        background-color: var(--backgLiHover);
+                        border: var(--borderLiHover);
+                        transform: var(--transformLiHover);
+                        box-shadow: var(--boxShadowLiHover);
+                    }
+                }
+            }
+        }
+    }
+}
