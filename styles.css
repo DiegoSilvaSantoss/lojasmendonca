@@ -33,15 +33,15 @@ body main {
   height: 100%;
   display: flex;
   flex-direction: column;
-  padding: 5rem 2rem;
-  -webkit-backdrop-filter: blur(100px);
-          backdrop-filter: blur(100px);
+  -webkit-backdrop-filter: blur(90px);
+          backdrop-filter: blur(90px);
 }
 body main header {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding-bottom: 50px;
+  padding-top: 6rem;
 }
 body main header h1 {
   color: var(--colorTitle);
@@ -69,46 +69,152 @@ body main header .content span {
   text-transform: uppercase;
 }
 body main section {
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
   display: flex;
-  align-items: center;
   justify-content: center;
-  padding: 20px;
 }
-body main section ul {
-  display: flex;
-  flex-direction: column;
+body main section .list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 20px;
-  list-style-type: none;
-  padding: 0;
+  width: 100%;
 }
-body main section ul li {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
-  position: relative;
-  border: solid 1px;
+body main section .list .card {
+  overflow: hidden;
+  border: solid 1px rgb(255, 255, 255);
   border-radius: 10px;
-  padding: 1.2rem 5rem;
   cursor: pointer;
-  background-color: var(--backgLi);
-  color: var(--colorLi);
-  border: var(--borderLi);
   transition: 0.5s ease;
 }
-body main section ul li img {
-  position: absolute;
-  left: 5px;
-  border-radius: 50%;
-  width: 50px;
+body main section .list .card img {
+  width: 300px;
+  height: 160px;
+  transition: 0.5s ease;
 }
-body main section ul li:hover {
-  background-color: var(--backgLiHover);
-  border: var(--borderLiHover);
-  transform: var(--transformLiHover);
-  box-shadow: var(--boxShadowLiHover);
+body main section .list .card img:hover {
+  transform: scale(1.05);
+}
+body main section .list .card .description {
+  position: relative;
+  bottom: 5px;
+  height: 100%;
+  padding: 5px;
+  background-color: #000000;
+  color: #ffffff;
+}
+body main section .list .card:hover {
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: rgba(0, 0, 0, 0.575) 0px 2px 1px, rgba(0, 0, 0, 0.507) 0px 4px 2px, rgba(0, 0, 0, 0.507) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+body main .icon-centro {
+  position: absolute;
+  bottom: 140px;
+  left: 20px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px;
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+body main .icon-centro img {
+  width: 40px;
+  transition: 0.5s ease;
+}
+body main .icon-centro img:hover {
+  transform: translateY(-2px) scale(1.1);
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 2px 1px, rgba(0, 0, 0, 0.05) 0px 4px 2px, rgba(0, 0, 0, 0.507) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+body main .icon-centro:hover {
+  transform: translateY(-5px) scale(1.1);
+}
+body main footer {
+  position: relative;
+  top: 90px;
+  bottom: 0;
+  width: 100%;
+  height: 200px;
+  padding-top: 40px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  background-color: #000000;
+}
+body main footer .copyright {
+  position: absolute;
+  bottom: 20px;
+}
+body main footer .copyright p {
+  color: #ffffff;
+}
+body main footer i {
+  color: rgb(255, 255, 255);
+  font-size: 40px;
+  transition: 0.5s ease;
+  cursor: pointer;
+}
+body main footer i:hover {
+  transform: translateY(-5px) scale(1.1);
+}
+body main footer i:nth-child(1) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  width: 50px;
+  border-radius: 15px;
+  background: linear-gradient(45deg, #833AB4, #FD1D1D, #FCAF45);
+}
+body main footer i:nth-child(2) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  width: 50px;
+  border-radius: 15px;
+  color: #002cbe;
+  background-color: #ffffff;
+  border-radius: 15px;
+}
+body main footer i:nth-child(3) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  width: 50px;
+  border-radius: 15px;
+  color: #d70000;
+  background-color: #ffffff;
+  border-radius: 15px;
 }
 
+@media only screen and (max-width: 720px) {
+  body section {
+    position: relative;
+    z-index: 1;
+    top: 30px;
+  }
+  body section .list {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+  body section .list .card {
+    width: 270px;
+    margin: 0 auto;
+  }
+  body section .list .card img {
+    width: 300px;
+    height: 160px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  body section .list .card.opacity {
+    opacity: 0;
+  }
+}
 @keyframes logoMovie {
   0%, 100% {
     transform: translateY(0);
