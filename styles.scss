@@ -62,7 +62,7 @@ body {
 
                 & img {
                     border-radius: 50%;
-                    width: 150px;
+                    width: 110px;
                     animation: logoMovie 5.1s ease-in-out infinite;
                 }
             }
@@ -90,45 +90,51 @@ body {
         & section {
             width: 100%;
             height: 100%;
-            padding: 1rem;
             display: flex;
             justify-content: center;
 
             & .list {
                 display: grid;
-                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-                gap: 20px;
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                gap: 1.5rem;
                 width: 100%;
+                padding: 2rem;
 
-                & .card {
-                    overflow: hidden;
-                    border: solid 1px rgb(255, 255, 255);
-                    border-radius: 10px;
-                    cursor: pointer;
-                    transition: 0.5s ease;
+                & .card-link {
+                    text-decoration: none;
 
-                    & img {
-                        width: 300px;
-                        height: 160px;
+                    & .card {
+                        overflow: hidden;
+                        border: solid 1px rgb(255, 255, 255);
+                        border-radius: 10px;
+                        height: 100%;
+                        width: 100%;
+                        cursor: pointer;
                         transition: 0.5s ease;
 
-                        &:hover {
-                            transform: scale(1.05);
+                        & img {
+                            width: 300px;
+                            height: 160px;
+                            transition: 0.5s ease;
+
+                            &:hover {
+                                transform: scale(1.05);
+                            }
                         }
-                    }
 
-                    & .description {
-                        position: relative;
-                        bottom: 5px;
-                        height: 100%;
-                        padding: 5px;
-                        background-color: #000000;
-                        color: #ffffff;
-                    }
+                        & .description {
+                            position: relative;
+                            bottom: 5px;
+                            height: 100%;
+                            padding: 5px;
+                            background-color: #000000;
+                            color: #ffffff;
+                        }
 
-                    &:hover {
-                        transform: translateY(-5px) scale(1.03);
-                        box-shadow: rgba(0, 0, 0, 0.575) 0px 2px 1px, rgba(0, 0, 0, 0.507) 0px 4px 2px, rgba(0, 0, 0, 0.507) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+                        &:hover {
+                            transform: translateY(-7px) scale(1.05);
+                            box-shadow: rgba(0, 0, 0, 0.575) 0px 2px 1px, rgba(0, 0, 0, 0.507) 0px 4px 2px, rgba(0, 0, 0, 0.507) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+                        }
                     }
                 }
             }
@@ -178,7 +184,7 @@ body {
 
             & .copyright {
                 position: absolute;
-                bottom: 20px;
+                bottom: 40px;
 
                 & p {
                     color: #ffffff;
@@ -187,7 +193,7 @@ body {
 
             & i {
                 color: rgb(255, 255, 255);
-                font-size: 40px;
+                font-size: 30px;
                 transition: 0.5s ease;
                 cursor: pointer;
 
@@ -200,8 +206,8 @@ body {
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                height: 50px;
-                width: 50px;
+                height: 40px;
+                width: 40px;
                 border-radius: 15px;
                 background: linear-gradient(45deg, #833AB4, #FD1D1D, #FCAF45);
 
@@ -211,8 +217,8 @@ body {
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                height: 50px;
-                width: 50px;
+                height: 40px;
+                width: 40px;
                 border-radius: 15px;
                 color: #002cbe;
                 background-color: #ffffff;
@@ -223,8 +229,8 @@ body {
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                height: 50px;
-                width: 50px;
+                height: 40px;
+                width: 40px;
                 border-radius: 15px;
                 color: #d70000;
                 background-color: #ffffff;
@@ -238,29 +244,39 @@ body {
 @media only screen and (max-width: 720px) {
     body {
 
-        & section {
-            position: relative;
-            z-index: 1;
-            top: 30px;
+        & main {
 
-            & .list {
-                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-                
-                & .card {
-                    width: 270px;
-                    margin: 0 auto;
-                    
+            & section {
+                position: relative;
+                z-index: 1;
+                top: 30px;
 
-                    & img {
-                        width: 300px;
-                        height: 160px;
-                        object-fit: cover;
-                    }
+                & .list {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
 
-                    &.opacity {
-                        opacity: 0;
+                    & .card {
+                        margin: 0 auto;
+
+
+                        & img {
+                            object-fit: cover;
+                        }
+
+                        & .description {
+
+                            & p {
+                                font-size: 23px;
+                                font-weight: bold;
+                            }
+                        }
                     }
                 }
+            }
+
+            & .icon-centro {
+                position: absolute;
+                bottom: 130px;
             }
         }
     }
