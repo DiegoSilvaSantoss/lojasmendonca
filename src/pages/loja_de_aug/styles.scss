@@ -14,6 +14,8 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    overflow: hidden;
     padding: 30px;
     background-image: url(./img/logo_lojas_mendocas.png.jpg);
     background-size: cover;
@@ -21,10 +23,13 @@ body {
     backdrop-filter: blur(50px);
 
     & main {
-        width: 500px;
+        width: 450px;
         height: 600px;
-        box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         border-radius: 10px;
+        box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 
         & header {
             border: solid 1px;
