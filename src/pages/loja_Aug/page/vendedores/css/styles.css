@@ -1,0 +1,44 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  background-image: url("../img/logo_lojas_mendocas.png.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  -webkit-backdrop-filter: blur(70px);
+          backdrop-filter: blur(70px);
+}
+body main {
+  width: 500px;
+  height: 520px;
+  border: solid 1px;
+  border-radius: 10px;
+}
+body main header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 50px 10px 5px 10px;
+}
+body main header img {
+  width: 100px;
+  border-radius: 50%;
+}
+body main header .description {
+  text-align: center;
+}
+body main section {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+}/*# sourceMappingURL=styles.css.map */

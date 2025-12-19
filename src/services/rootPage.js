@@ -3,7 +3,7 @@ export default function rootPage() {
 
     if (cardAug) {
         cardAug.addEventListener('click', () => {
-            window.location.href = './src/pages/loja_de_aug/aug.html';
+            window.location.href = './src/pages/loja_Aug/index.html';
         });
     }
 }
