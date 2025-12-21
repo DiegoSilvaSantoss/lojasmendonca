@@ -1,4 +1,6 @@
-export default function rootPage() {
+
+// LOJA DE AUGUSTINÓPOIS
+export default function rootPageAug() {
     const cardAug = document.getElementById('card-aug');
 
     if (cardAug) {

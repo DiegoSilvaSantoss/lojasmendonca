@@ -1,3 +1,9 @@
-import rootPage from "./src/services/rootPage.js";
+import rootPageAug from "./src/services/rootPageAug.js";
+import rootPageBut from "./src/services/rootPageBut.js";
+import rootPageTcp from "./src/services/rootPageTcp.js";
+import rootPageAnn from "./src/services/rootPageAnn.js";
 
-rootPage()
+rootPageAug()
+rootPageBut()
+rootPageAnn()
+rootPageTcp()
