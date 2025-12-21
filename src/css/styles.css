@@ -3,229 +3,113 @@
   margin: 0;
   box-sizing: border-box;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-}
-
-:root {
-  --backgContent: rgb(0, 0, 0);
-  --backgLi: rgb(0, 0, 0);
-  --backgSpan: #cc0000;
-  --backgLiHover: #cc0000;
-  --colorContent: rgb(255, 255, 255);
-  --colorTitle: rgb(255, 255, 255);
-  --colorLi: rgb(255, 255, 255);
-  --borderContent: solid 1px rgb(255, 255, 255);
-  --borderLi: solid 1px rgb(255, 255, 255);
-  --borderLiHover: solid 1px black;
-  --textShadowH1: 5px -1px 0px #000000;
-  --boxShadowLiHover: rgb(0, 0, 0) 0px 20px 30px -10px;
-  --transformLiHover: translateY(-5px) scale(1.02);
+  font-size: 20px;
 }
 
 body {
-  font-size: 18px;
-  background-image: url("../img/logo_lojas_mendocas.png.jpg");
+  padding: 1rem;
+}
+body .efeito-blur {
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(0deg, rgb(46, 46, 46) 48%, rgb(255, 0, 0) 100%);
+  filter: blur(40px);
+  transform: scale(1.5);
+  z-index: -1;
+}
+body header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 1rem;
+  width: 100%;
+  min-height: 100vh;
+}
+body header .box-img {
+  text-align: center;
+}
+body header .box-img img {
+  width: 120px;
+  border-radius: 50%;
+}
+body header .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body header .content .title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+}
+body header .content .tag {
+  font-size: 1rem;
+  font-weight: 500;
+  color: rgb(255, 255, 255);
+}
+body header .arrow img {
+  width: 25px;
+}
+body main .card-list {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+body main .card-list .card {
+  width: 100%;
+  height: 12rem;
+  border-radius: 16px;
+  overflow: hidden;
+  border: solid 1px beige;
+  transition: 0.5s ease;
+  cursor: pointer;
+}
+body main .card-list .card .box-img {
+  width: 100%;
+  height: 7rem;
+}
+body main .card-list .card .box-img img {
+  height: 100%;
+  width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  background-position: center;
-}
-body main {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  -webkit-backdrop-filter: blur(90px);
-          backdrop-filter: blur(90px);
-}
-body main header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-bottom: 50px;
-  padding-top: 6rem;
-}
-body main header h1 {
-  color: var(--colorTitle);
-  text-transform: uppercase;
-  text-shadow: var(--textShadowH1);
-}
-body main header .img-box img {
-  border-radius: 50%;
-  width: 110px;
-  animation: logoMovie 5.1s ease-in-out infinite;
-}
-body main header .content {
-  text-align: center;
-  border: var(--borderContent);
-  border-radius: 10px;
-  padding: 1rem 4rem;
-  margin-top: 20px;
-  background-color: var(--backgContent);
-  color: var(--colorContent);
-}
-body main header .content span {
-  padding: 2px;
-  border-radius: 5px;
-  background-color: var(--backgSpan);
-  text-transform: uppercase;
-}
-body main section {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-}
-body main section .list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1.5rem;
-  width: 100%;
-  padding: 2rem;
-}
-body main section .list .card {
-  overflow: hidden;
-  border: solid 1px rgb(255, 255, 255);
-  border-radius: 10px;
-  height: 100%;
-  width: 100%;
-  cursor: pointer;
+  filter: brightness(90%);
   transition: 0.5s ease;
 }
-body main section .list .card img {
-  width: 300px;
-  height: 160px;
-  transition: 0.5s ease;
-}
-body main section .list .card img:hover {
-  transform: scale(1.05);
-}
-body main section .list .card .description {
-  position: relative;
-  bottom: 5px;
-  height: 100%;
-  padding: 5px;
-  background-color: #000000;
-  color: #ffffff;
-}
-body main section .list .card:hover {
-  transform: translateY(-7px) scale(1.05);
-  box-shadow: rgba(0, 0, 0, 0.575) 0px 2px 1px, rgba(0, 0, 0, 0.507) 0px 4px 2px, rgba(0, 0, 0, 0.507) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
-}
-body main .icon-centro {
-  position: absolute;
-  bottom: 140px;
-  left: 20px;
-  background-color: #ffffff;
-  border-radius: 5px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 2px;
-  cursor: pointer;
-  transition: 0.5s ease;
-}
-body main .icon-centro img {
-  width: 40px;
-  transition: 0.5s ease;
-}
-body main .icon-centro img:hover {
-  transform: translateY(-2px) scale(1.1);
-  box-shadow: rgba(0, 0, 0, 0.05) 0px 2px 1px, rgba(0, 0, 0, 0.05) 0px 4px 2px, rgba(0, 0, 0, 0.507) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
-}
-body main .icon-centro:hover {
+body main .card-list .card .box-img img:hover {
   transform: translateY(-5px) scale(1.1);
 }
-body main footer {
-  position: relative;
-  top: 90px;
-  bottom: 0;
+body main .card-list .card .content {
+  height: 100%;
   width: 100%;
-  height: 200px;
-  padding-top: 40px;
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  background-color: #000000;
-}
-body main footer .copyright {
-  position: absolute;
-  bottom: 40px;
-}
-body main footer .copyright p {
-  color: #ffffff;
-}
-body main footer i {
+  padding: 0.5rem;
+  background: linear-gradient(321deg, rgb(41, 41, 41) 48%, rgb(0, 0, 0) 100%);
   color: rgb(255, 255, 255);
-  font-size: 30px;
-  transition: 0.5s ease;
-  cursor: pointer;
 }
-body main footer i:hover {
-  transform: translateY(-5px) scale(1.1);
-}
-body main footer i:nth-child(1) {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 40px;
-  width: 40px;
-  border-radius: 15px;
-  background: linear-gradient(45deg, #833AB4, #FD1D1D, #FCAF45);
-}
-body main footer i:nth-child(2) {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 40px;
-  width: 40px;
-  border-radius: 15px;
-  color: #002cbe;
-  background-color: #ffffff;
-  border-radius: 15px;
-}
-body main footer i:nth-child(3) {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 40px;
-  width: 40px;
-  border-radius: 15px;
-  color: #d70000;
-  background-color: #ffffff;
-  border-radius: 15px;
+body main .card-list .card:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
 
 @media only screen and (max-width: 720px) {
-  body main section {
-    position: relative;
-    z-index: 1;
-    top: 30px;
+  body header {
+    min-height: 35vh;
   }
-  body main section .list {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  body header .box-img img {
+    width: 140px;
   }
-  body main section .list .card {
-    margin: 0 auto;
+  body header .content {
+    display: flex;
+    gap: 15px;
+    padding: 0;
   }
-  body main section .list .card img {
-    -o-object-fit: cover;
-       object-fit: cover;
-  }
-  body main section .list .card .description p {
-    font-size: 23px;
+  body header .content .title {
+    font-size: 1.5rem;
     font-weight: bold;
   }
-  body main .icon-centro {
-    position: absolute;
-    bottom: 130px;
-  }
-}
-@keyframes logoMovie {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-20px) scale(1.1);
-    box-shadow: rgba(0, 0, 0, 0.5) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(11, 11, 11, 0.418) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+  body header .content .tag {
+    opacity: 0.8;
   }
 }/*# sourceMappingURL=styles.css.map */
