@@ -1,5 +1,5 @@
 export default function rootPage() {
-    const cardAug = document.querySelector('.card-aug');
+    const cardAug = document.getElementById('card-aug');
 
     if (cardAug) {
         cardAug.addEventListener('click', () => {
