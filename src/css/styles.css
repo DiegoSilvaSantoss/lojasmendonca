@@ -154,8 +154,16 @@ body footer .rodape .box-img img:hover {
   body main {
     margin-bottom: 2rem;
   }
+  body footer {
+    width: 95%;
+    padding: 0;
+    height: 80px;
+    border: none;
+    background: linear-gradient(321deg, rgba(41, 41, 41, 0.578) 48%, rgba(0, 0, 0, 0.66) 100%);
+  }
   body footer .rodape .box-img img {
     width: 40px;
+    filter: brightness(100%);
   }
 }
 @keyframes logoMovie {
