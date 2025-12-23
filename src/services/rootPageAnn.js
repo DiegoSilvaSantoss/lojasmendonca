@@ -4,7 +4,7 @@ export default function rootPageAnn() {
 
     if (cardAnn) {
         cardAnn.addEventListener('click', () => {
-            window.location.href = './src/pages/loja_Ann/index.html';
+            window.location.href = './src/pages/loja_ann/index.html';
         });
     }
 }
