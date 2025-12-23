@@ -165,10 +165,12 @@ body {
 
         & header {
             min-height: 31vh;
+            margin: 0;
             padding: 0;
 
             & .box-img {
                 padding: 0;
+                margin-top: 15px;
 
                 & img {
                     width: 120px;
@@ -177,8 +179,9 @@ body {
 
             & .content {
                 display: flex;
-                gap: 15px;
+                gap: 10px;
                 padding: 0;
+                margin: 0;
 
                 & .title {
                     font-size: 1.5rem;
@@ -192,7 +195,11 @@ body {
         }
 
         & main {
-            margin-bottom: 2rem;
+            margin-bottom: 0.4rem;
+
+            & .card-list {
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            }
         }
 
         & footer {
