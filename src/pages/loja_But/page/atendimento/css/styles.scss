@@ -157,5 +157,29 @@ body {
         }
     }
 }
+}
 
+@media only screen and (min-width: 360px) {
+    body {
+
+
+        & section {
+
+            & .card-list {
+                padding: 0;
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
+                & .card {
+                    width: 100%;
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    body {
+        padding: 0;
+    }
 }

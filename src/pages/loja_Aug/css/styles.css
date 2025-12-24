@@ -104,4 +104,39 @@ body main section button:hover {
 }
 body main section button:hover img {
   transform: scale(1.2);
+}
+
+@media only screen and (min-width: 360px) {
+  body main {
+    width: 320px;
+  }
+  body main header .logo {
+    left: 35%;
+  }
+  body main section {
+    margin-top: 2rem;
+  }
+  body main section button {
+    font-size: 16px;
+  }
+  body main section button img {
+    width: 30px;
+  }
+}
+@media only screen and (min-width: 480px) {
+  body main {
+    width: 430px;
+  }
+  body main header .logo {
+    left: 40%;
+  }
+  body main section {
+    margin-top: 0.5rem;
+  }
+  body main section button {
+    font-size: 19px;
+  }
+  body main section button img {
+    width: 40px;
+  }
 }/*# sourceMappingURL=styles.css.map */

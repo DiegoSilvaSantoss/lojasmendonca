@@ -207,6 +207,7 @@ body {
             padding: 0;
             height: 80px;
             border: none;
+            margin-top: 2rem;
             background: linear-gradient(321deg, rgba(41, 41, 41, 0.578) 48%, rgba(0, 0, 0, 0.66) 100%);
 
             & .rodape {
@@ -217,6 +218,34 @@ body {
                         width: 40px;
                         filter: brightness(100%);
                     }
+                }
+            }
+        }
+    }
+}
+
+
+@media only screen and (min-width: 350px) and (max-width: 480px) {
+    body {
+        overflow: auto;
+
+        & header {
+
+            & .box-img {
+
+                & img {
+                    width: 109px;
+                }
+            }
+
+            & .content {
+
+                & .title {
+                    font-size: 25px;
+                }
+
+                & .tag {
+                    font-size: 16px;
                 }
             }
         }

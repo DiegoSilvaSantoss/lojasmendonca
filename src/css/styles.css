@@ -165,11 +165,26 @@ body footer .rodape .box-img img:hover {
     padding: 0;
     height: 80px;
     border: none;
+    margin-top: 2rem;
     background: linear-gradient(321deg, rgba(41, 41, 41, 0.578) 48%, rgba(0, 0, 0, 0.66) 100%);
   }
   body footer .rodape .box-img img {
     width: 40px;
     filter: brightness(100%);
+  }
+}
+@media only screen and (min-width: 350px) and (max-width: 480px) {
+  body {
+    overflow: auto;
+  }
+  body header .box-img img {
+    width: 109px;
+  }
+  body header .content .title {
+    font-size: 25px;
+  }
+  body header .content .tag {
+    font-size: 16px;
   }
 }
 @keyframes logoMovie {
