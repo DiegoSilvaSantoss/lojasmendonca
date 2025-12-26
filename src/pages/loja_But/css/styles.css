@@ -103,29 +103,12 @@ body main section button:hover img {
   transform: scale(1.2);
 }
 
-@media only screen and (min-width: 360px) {
+@media only screen and (min-width: 400px) and (max-width: 450px) {
   body main {
-    width: 320px;
+    width: 23rem;
   }
   body main header .logo {
-    left: 35%;
-  }
-  body main section {
-    margin-top: 2rem;
-  }
-  body main section button {
-    font-size: 16px;
-  }
-  body main section button img {
-    width: 30px;
-  }
-}
-@media only screen and (min-width: 480px) {
-  body main {
-    width: 430px;
-  }
-  body main header .logo {
-    left: 40%;
+    left: 37%;
   }
   body main section {
     margin-top: 0.5rem;

@@ -120,46 +120,17 @@ body {
 }
 
 
-
-@media only screen and (min-width: 360px) {
+// RESOLUÇÃO DE ESCALA PADRÃO DE CELULARES
+@media only screen and (min-width: 400px) and (max-width: 450px) {
     body {
 
         & main {
-            width: 320px;
+            width: 23rem;
 
             & header {
 
                 & .logo {
-                    left: 35%;
-                }
-            }
-
-
-            & section {
-                margin-top: 2rem;
-
-                & button {
-                    font-size: 16px;
-
-                    & img {
-                        width: 30px;
-                    }
-                }
-            }
-        }
-    }
-}
-
-@media only screen and (min-width: 480px) {
-    body {
-
-        & main {
-            width: 430px;
-
-            & header {
-
-                & .logo {
-                    left: 40%;
+                    left: 37%;
                 }
             }
 

@@ -9,7 +9,7 @@
 
 
 
-
+// ESCALA DE LAYOUT PRA PC
 body {
     padding: 1rem;
 
@@ -157,7 +157,7 @@ body {
 }
 
 
-
+// ADPTAR ALGUMAS FUNCIONALIDADES NO QUELRIE 400PX, E DEPOIS APAGAR ESSE
 @media only screen and (max-width: 720px) {
     body {
         padding: 0 1rem 1rem;
@@ -225,13 +225,17 @@ body {
 }
 
 
-@media only screen and (min-width: 350px) and (max-width: 480px) {
+// RESOLUÇÃO DE ESCALA PADRÃO DE CELULARES
+@media only screen and (min-width: 400px) and (max-width: 450px) {
     body {
         overflow: auto;
+        overflow: hidden;
 
         & header {
+            padding: 0;
 
             & .box-img {
+
 
                 & img {
                     width: 109px;
@@ -240,12 +244,55 @@ body {
 
             & .content {
 
+
                 & .title {
                     font-size: 25px;
                 }
 
                 & .tag {
                     font-size: 16px;
+                }
+            }
+        }
+
+
+        & main {
+            
+            & .card-list {
+
+                & .card {
+                    height: 10rem;
+
+                    & .content {
+                        padding: 0.5rem;
+
+                        & h2 {
+                            font-size: 1rem;
+                        }
+
+                        & p {
+                            font-size: 0.8rem;
+                        }
+                    }
+                }
+            }
+        }
+
+
+        & footer {
+            margin: 0;
+            margin-top: 0.7rem;
+            height: 3rem;
+
+            & .rodape {
+                padding: 0;
+                height: 100%;
+
+                & .box-img {
+
+                    & img {
+                        width: 1.5rem;
+                    }
                 }
             }
         }
