@@ -141,46 +141,28 @@ body {
 
 
 
-
-@media only screen and (max-width: 640px) {
-    
-body {
-
-    & main {
-        height: 950px;
-
-        & section {
-
-            & .card-list {
-                height: 75%;
-            }
-        }
-    }
-}
-}
-
-
-@media only screen and (min-width: 360px) {
+// RESOLUÇÃO DE ESCALA PADRÃO DE CELULARES
+@media only screen and (min-width: 400px) and (max-width: 450px) {
     body {
 
+        & main {
+            height: 45rem;
 
-        & section {
-
-            & .card-list {
-                padding: 0;
-                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-
-                & .card {
-                    width: 100%;
+            & section {
+                height: 100vh;
+                
+                & .card-list {
+                    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                    height: 50%;
+                    width: 40vh;
                     margin: 0 auto;
+
+                    & .card {
+                        width: 100%;
+                        padding: 1.4rem;
+                    }
                 }
             }
         }
-    }
-}
-
-@media only screen and (min-width: 480px) {
-    body {
-        padding: 0;
     }
 }

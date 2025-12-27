@@ -123,9 +123,12 @@ body main section .card-list .card:hover {
   body main {
     height: 45rem;
   }
+  body main section {
+    height: 100vh;
+  }
   body main section .card-list {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    height: 58vh;
+    height: 50%;
     width: 40vh;
     margin: 0 auto;
   }

@@ -64,7 +64,7 @@ body main section .card-list {
   padding: 24px;
   gap: 10px;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  overflow-y: auto;
+  overflow: auto;
 }
 body main section .card-list .card {
   width: 200px;
