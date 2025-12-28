@@ -1,0 +1,135 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root {
+  --backgEfeiitoBlur: linear-gradient(0deg, rgba(46, 46, 46, 1) 48%, rgb(255, 0, 0) 100%);
+  --backgContentCard: linear-gradient(321deg, rgba(41, 41, 41, 1) 48%, rgba(0, 0, 0, 1) 100%);
+  --backgFooter: rgba(0, 0, 0, 0.692);
+  --colorDescription: rgb(255, 255, 255);
+  --colorContentCard: rgb(255, 255, 255);
+  --borderCard: solid 1.5px rgb(255, 255, 255);
+  --transitionCardHover: 0.5s ease;
+  --transitionCardImgHover: 0.5s ease-in-out;
+  --transitionFooterImg: 0.5s ease;
+  --transformCardHover: translateY(-5px) scale(1.02);
+  --transformCardImgHover: scale(1.1);
+  --transformFooterImg: translateY(-5px) scale(1.1);
+  --shadowCardHover: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  --animationLogoHeader: logoMovie 3s infinite ease-in-out;
+}
+
+body {
+  padding: 1.5rem;
+}
+body .efeito-blur {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  filter: blur(16px);
+  transform: scale(1.2);
+  background: var(--backgEfeiitoBlur);
+}
+body header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
+  height: 100vh;
+  padding: 1rem;
+}
+body header .box-img img {
+  width: 150px;
+  border-radius: 50%;
+  animation: var(--animationLogoHeader);
+}
+body header .description {
+  text-align: center;
+  color: var(--colorDescription);
+}
+body header .description .tag {
+  opacity: 0.7;
+}
+body header .box-arrow {
+  margin-top: 1rem;
+}
+body header .box-arrow img {
+  width: 30px;
+}
+body section .card-list {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+body section .card-list .card {
+  overflow: hidden;
+  padding: 0;
+  border: var(--borderCard);
+  border-radius: 10px;
+  transition: var(--transitionCardHover);
+}
+body section .card-list .card .box-img {
+  width: 100%;
+  height: 10rem;
+}
+body section .card-list .card .box-img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  filter: brightness(90%);
+  transition: var(--transitionCardImgHover);
+}
+body section .card-list .card .box-img img:hover {
+  transform: var(--transformCardImgHover);
+}
+body section .card-list .card .content {
+  padding: 0.5rem;
+  margin: 0;
+  color: var(--colorContentCard);
+  background: var(--backgContentCard);
+  height: 100%;
+}
+body section .card-list .card:hover {
+  transform: var(--transformCardHover);
+  box-shadow: var(--shadowCardHover);
+  cursor: pointer;
+}
+body footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 7rem;
+  border-radius: 20px;
+  background: var(--backgFooter);
+  margin: 0 auto;
+  margin-top: 3rem;
+}
+body footer .redes-socias {
+  display: flex;
+  gap: 2rem;
+}
+body footer .redes-socias img {
+  width: 30px;
+  transition: var(--transitionFooterImg);
+}
+body footer .redes-socias img:hover {
+  cursor: pointer;
+  transform: var(--transformFooterImg);
+}
+
+@keyframes logoMovie {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+    box-shadow: rgb(0, 0, 0) 0px 20px 30px -10px;
+  }
+}/*# sourceMappingURL=styles.css.map */

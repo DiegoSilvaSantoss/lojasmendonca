@@ -1,11 +1,8 @@
+export default function pageAug() {
+    const cardAug = document.getElementById('card-aug')
 
-// LOJA DE AUGUSTINÓPOIS
-export default function rootPageAug() {
-    const cardAug = document.getElementById('card-aug');
-
-    if (cardAug) {
-        cardAug.addEventListener('click', () => {
-            window.location.href = './src/pages/loja_Aug/index.html';
-        });
-    }
+    cardAug.addEventListener('click', () => {
+        
+        window.location.href = './src/pages/loja_Aug/index.html'
+    })
 }
