@@ -6,4 +6,4 @@ import pageAnn from "./src/services/rootPageAnn.js";
 pageAug();
 pageBut();
 pageTcp();
-pageAnn()
+pageAnn();
