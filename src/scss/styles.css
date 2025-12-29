@@ -16,7 +16,7 @@
   --transitionCardImgHover: 0.5s ease-in-out;
   --transitionFooterImg: 0.5s ease;
   --transformCardHover: translateY(-5px) scale(1.02);
-  --transformCardImgHover: scale(1.1);
+  --transformCardImgHover: scale(1.08);
   --transformFooterImg: translateY(-5px) scale(1.1);
   --shadowCardHover: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
   --animationLogoHeader: logoMovie 3s infinite ease-in-out;

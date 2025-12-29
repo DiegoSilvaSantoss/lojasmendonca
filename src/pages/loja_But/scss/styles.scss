@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+:root {
+
+    --backgEfeiitoBlur: linear-gradient(0deg, rgba(46, 46, 46, 1) 48%, rgb(255, 0, 0) 100%);
+    --backgMain: linear-gradient(321deg, rgba(41, 41, 41, 1) 48%, rgba(0, 0, 0, 1) 100%);
+    --backgButton: rgb(0, 0, 0);
+
+    --colorHeader: rgb(255, 255, 255);
+    --colorButton: rgb(255, 255, 255);
+
+    --borderMain: solid 1.5px rgb(255, 255, 255);
+    --borderBoxImg: solid 1px black;
+    --borderButton: solid 1px rgb(255, 255, 255);
+
+    --shadowButtonHover: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+
+    --transformButtonHover: translateY(-5px) scale(1.03);
+    --transformImgButtonHover: scale(1.2);
+
+    --transitionButton: 0.5s ease;
+    --transitionImgButtonHover: 0.7s ease-in-out;
+}
+
+
+// REVIEW PC
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+
+    .efeito-blur {
+        position: fixed;
+        inset: 0;
+        z-index: -1;
+        filter: blur(16px);
+        transform: scale(1.2);
+        background: var(--backgEfeiitoBlur);
+    }
+
+
+    main {
+        border-radius: 10px;
+        overflow: hidden;
+        border: var(--borderMain);
+        background: var(--backgMain);
+        width: 450px;
+        max-width: 1200px;
+        height: 530px;
+
+        header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+            color: var(--colorHeader);
+            
+            .box-img {
+                border: var(--borderBoxImg);
+                overflow: hidden;
+                width: 100%;
+                height: 200px;
+                border-radius: 10px;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    filter: brightness(90%);
+                    object-fit: cover;
+                }
+            }
+
+            .title {
+                text-transform: uppercase;
+                font-size: 27px;
+            }
+        }
+
+
+        section {
+            margin-top: 1.5rem;
+
+            .buttons {
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+                padding: 1rem;
+
+                button {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 0.5rem;
+                    position: relative;
+                    padding: 1rem;
+                    border: none;
+                    border-radius: 10px;
+                    background: var(--backgButton);
+                    color: var(--colorButton);
+                    border: var(--borderButton);
+                    font-size: 20px;
+                    text-transform: uppercase;
+                    font-weight: bold;
+                    transition: var(--transitionButton);
+
+                    img {
+                        width: 40px;
+                        position: absolute;
+                        left: 0.5rem;
+                        transition: var(--transitionImgButtonHover);
+                    }
+
+                    &:hover {
+                        cursor: pointer;
+                        transform: var(--transformButtonHover);
+                        box-shadow: var(--shadowButtonHover);
+                    }
+
+                    &:hover img {
+                        transform: var(--transformImgButtonHover);
+                    }
+                }
+            }
+        }
+    }
+}
