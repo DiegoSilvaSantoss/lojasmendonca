@@ -22,6 +22,10 @@
   --animationLogoHeader: logoMovie 3s infinite ease-in-out;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   padding: 1.5rem;
 }
@@ -60,6 +64,7 @@ body header .box-arrow {
 }
 body header .box-arrow img {
   width: 30px;
+  animation: arrowMovie 2s ease-in-out infinite;
 }
 body section .card-list {
   display: grid;
@@ -133,6 +138,14 @@ body footer .redes-socias img:hover {
     box-shadow: rgb(0, 0, 0) 0px 20px 30px -10px;
   }
 }
+@keyframes arrowMovie {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
 @media only screen and (max-width: 480px) {
   body header {
     display: flex;
@@ -172,7 +185,7 @@ body footer .redes-socias img:hover {
   body section .card-list {
     display: grid;
     gap: 1rem;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(155px, 1fr));
   }
   body section .card-list .card {
     overflow: hidden;
@@ -202,6 +215,9 @@ body footer .redes-socias img:hover {
     color: var(--colorContentCard);
     background: var(--backgContentCard);
     height: 100%;
+  }
+  body section .card-list .card .content h2 {
+    font-size: 1.3rem;
   }
   body section .card-list .card:hover {
     transform: var(--transformCardHover);

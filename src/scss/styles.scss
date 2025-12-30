@@ -32,6 +32,11 @@
 }
 
 
+html {
+    scroll-behavior: smooth;
+}
+
+
 // REVIEW PC
 body {
     padding: 1.5rem;
@@ -80,6 +85,7 @@ body {
 
             img {
                 width: 30px;
+                animation: arrowMovie 2s ease-in-out infinite;
             }
         }
     }
@@ -180,6 +186,19 @@ body {
 }
 
 
+// ANIMAÇÃO DA IMG ARROW
+@keyframes arrowMovie {
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+}
+
+
 // REVIEW CELULARES PADRÃO
 @media only screen and (max-width: 480px) {
     body {
@@ -236,7 +255,7 @@ body {
             .card-list {
                 display: grid;
                 gap: 1rem;
-                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+                grid-template-columns: repeat(auto-fit, minmax(155px, 1fr));
                 //border: solid 1px red;
 
                 .card {
@@ -269,6 +288,10 @@ body {
                         color: var(--colorContentCard);
                         background: var(--backgContentCard);
                         height: 100%;
+
+                        h2 {
+                            font-size: 1.3rem;
+                        }
                     }
 
                     &:hover {
