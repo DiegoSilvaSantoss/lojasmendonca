@@ -61,6 +61,7 @@ body header .description .tag {
 }
 body header .box-arrow {
   margin-top: 1rem;
+  cursor: pointer;
 }
 body header .box-arrow img {
   width: 30px;
@@ -147,6 +148,22 @@ body footer .redes-socias img:hover {
   }
 }
 @media only screen and (max-width: 480px) {
+  :root {
+    --backgEfeiitoBlur: linear-gradient(0deg, rgba(46, 46, 46, 1) 48%, rgb(255, 0, 0) 100%);
+    --backgContentCard: linear-gradient(321deg, rgba(41, 41, 41, 1) 48%, rgba(0, 0, 0, 1) 100%);
+    --backgFooter: rgba(0, 0, 0, 0.242);
+    --colorDescription: rgb(255, 255, 255);
+    --colorContentCard: rgb(255, 255, 255);
+    --borderCard: solid 1.5px rgb(255, 255, 255);
+    --transitionCardHover: 0.5s ease;
+    --transitionCardImgHover: 0.5s ease-in-out;
+    --transitionFooterImg: 0.5s ease;
+    --transformCardHover: translateY(-5px) scale(1.02);
+    --transformCardImgHover: scale(1.08);
+    --transformFooterImg: translateY(-5px) scale(1.1);
+    --shadowCardHover: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    --animationLogoHeader: logoMovie 3s infinite ease-in-out;
+  }
   body header {
     display: flex;
     flex-direction: column;
@@ -188,6 +205,7 @@ body footer .redes-socias img:hover {
     grid-template-columns: repeat(auto-fit, minmax(155px, 1fr));
   }
   body section .card-list .card {
+    position: relative;
     overflow: hidden;
     padding: 0;
     border: var(--borderCard);
@@ -197,6 +215,8 @@ body footer .redes-socias img:hover {
   body section .card-list .card .box-img {
     width: 100%;
     height: 10rem;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
   }
   body section .card-list .card .box-img img {
     width: 100%;
@@ -204,14 +224,18 @@ body footer .redes-socias img:hover {
     -o-object-fit: cover;
        object-fit: cover;
     filter: brightness(90%);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
     transition: var(--transitionCardImgHover);
   }
   body section .card-list .card .box-img img:hover {
     transform: var(--transformCardImgHover);
   }
   body section .card-list .card .content {
+    position: relative;
+    z-index: -1;
+    top: -5px;
     padding: 0.5rem;
-    margin: 0;
     color: var(--colorContentCard);
     background: var(--backgContentCard);
     height: 100%;

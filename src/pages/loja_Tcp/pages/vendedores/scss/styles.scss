@@ -1,0 +1,140 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+:root {
+
+    --backgEfeiitoBlur: linear-gradient(0deg, rgba(46, 46, 46, 1) 48%, rgb(255, 0, 0) 100%);
+    --backgSectionMain: linear-gradient(321deg, rgba(41, 41, 41, 1) 48%, rgba(0, 0, 0, 1) 100%);
+    --backgCardCardlist: black;
+    --backgButtonCard: green;
+
+    --colorDescriptionHeader: rgb(255, 255, 255);
+    --colorDescriptionCard: rgb(255, 255, 255);
+    --colorButtonCard: rgb(255, 255, 255);
+
+    --borderCardCardList: solid 1px rgb(255, 255, 255);
+
+    --transformButtonCard: translateY(-5px) scale(1.05);
+    --transformImgButton: scale(1.1);
+
+    --transitionButtonCard: 0.5s ease;
+    --transitionImgButton: 0.7s ease;
+    
+}
+
+
+body {
+    overflow: hidden;
+
+    .efeito-blur {
+        position: fixed;
+        inset: 0;
+        z-index: -1;
+        filter: blur(16px);
+        transform: scale(1.2);
+        background: var(--backgEfeiitoBlur);
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+        height: 100vh;
+        padding: 1rem;
+        overflow: hidden;
+
+
+        header {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 0.5rem;
+
+            .box-img {
+                text-align: center;
+
+                img {
+                    width: 100px;
+                    border-radius: 50%;
+                }
+            }
+
+            .description {
+                text-align: center;
+                color: var(--colorDescriptionHeader);
+            }
+        }
+
+
+        section {
+            //border: solid 2px green;
+            overflow: hidden;
+            background: var(--backgSectionMain);
+            border-radius: 10px;
+
+            .card-list {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                gap: 1rem;
+                padding: 1rem;
+                overflow-y: scroll;
+                height: 60vh;
+
+                .card {
+                    display: flex;
+                    flex-direction: column;
+                    border-radius: 10px;
+                    padding: 1rem;
+                    border: var(--borderCardCardList);
+                    background: var(--backgCardCardlist);
+
+                    .box-img {
+                        text-align: center;
+                    }
+
+                    .description {
+                        text-align: center;
+                        color: var(--colorDescriptionCard);
+                        padding: 1rem;
+                    }
+
+                    .box-button {
+                        display: flex;
+                        justify-content: center;
+
+                        button {
+                            display: flex;
+                            align-items: center;
+                            gap: 0.5rem;
+                            border: none;
+                            border-radius: 10px;
+                            padding: 0.3rem;
+                            font-weight: bold;
+                            transition: var(--transitionButtonCard);
+                            color: var(--colorButtonCard);
+                            background: var(--backgButtonCard);
+
+                            img {
+                                transition: var(--transitionImgButton);
+                            }
+
+                            &:hover {
+                                transform: var(--transformButtonCard);
+                                cursor: pointer;
+                            }
+
+                            &:hover img {
+                                transform: var(--transformImgButton);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
