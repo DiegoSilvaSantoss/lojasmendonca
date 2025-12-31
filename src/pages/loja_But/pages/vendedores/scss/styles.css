@@ -56,6 +56,9 @@ body main header .description {
   text-align: center;
   color: var(--colorDescriptionHeader);
 }
+body main header .description h1 {
+  text-transform: uppercase;
+}
 body main section {
   overflow: hidden;
   background: var(--backgSectionMain);

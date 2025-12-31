@@ -12,6 +12,7 @@
     --backgSectionMain: linear-gradient(321deg, rgba(41, 41, 41, 1) 48%, rgba(0, 0, 0, 1) 100%);
     --backgCardCardlist: black;
     --backgButtonCard: green;
+    --backgImgCard: rgb(255, 255, 255);
 
     --colorDescriptionHeader: rgb(255, 255, 255);
     --colorDescriptionCard: rgb(255, 255, 255);
@@ -24,7 +25,7 @@
 
     --transitionButtonCard: 0.5s ease;
     --transitionImgButton: 0.7s ease;
-    
+
 }
 
 
@@ -99,6 +100,11 @@ body {
 
                     .box-img {
                         text-align: center;
+
+                        img {
+                            background: var(--backgImgCard);
+                            border-radius: 50%;
+                        }
                     }
 
                     .description {

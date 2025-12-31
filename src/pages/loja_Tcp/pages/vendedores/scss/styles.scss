@@ -67,6 +67,10 @@ body {
             .description {
                 text-align: center;
                 color: var(--colorDescriptionHeader);
+
+                h1 {
+                    text-transform: uppercase;
+                }
             }
         }
 
